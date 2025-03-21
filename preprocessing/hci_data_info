@@ -1,0 +1,48 @@
+1.生理信号数据
+    文件格式: .bdf (Biosemi Data Format)
+    内容:多通道生理信号数据，通常包括
+        EEG（脑电图）: 32通道或更多，记录大脑电活动。
+        ECG（心电图）: 记录心脏电活动。
+        GSR（皮肤电反应）: 记录皮肤电导变化，反映情绪唤醒度。
+        其他信号: 如呼吸、肌电等。
+
+        文件名示例:
+        Part_1_S_Trial1_emotion.bdf
+        Part_2_S_Trial2_emotion.bdf
+
+2. 眼动数据
+    文件格式: .tsv
+    内容:眼动仪记录的数据，通常包括：
+        注视点坐标 (GazePointX, GazePointY): 用户在屏幕上的注视位置。
+        瞳孔大小 (PupilLeft, PupilRight): 左右眼的瞳孔直径。
+        眼睛距离 (DistanceLeft, DistanceRight): 眼睛与眼动仪的距离。
+        有效性标记 (ValidityLeft, ValidityRight): 数据是否有效。
+        事件标记 (Event): 如 MovieStart, MovieEnd, KeyPress 等。
+
+        文件名示例:
+        P1-Rec1-All-Data-New_Section_1.tsv
+        P2-Rec1-All-Data-New_Section_2.tsv
+
+3. 视频记录
+    文件格式: .mp4 或 .avi
+    内容:用户在实验过程中观看的视频片段。通常用于诱发特定情感（如快乐、悲伤、愤怒等）。
+
+    文件名示例:
+    Video1.mp4
+    Video2.avi
+
+4. 情感标签和元数据
+    文件格式: .xml
+    内容:实验的元数据和情感标签，通常包括：
+
+    情感维度:
+        feltArsl: 情感唤醒度（Arousal）。
+        feltVlnc: 情感效价（Valence）。
+        feltEmo: 情感类别（如快乐、悲伤等）。
+    实验信息:
+        subject: 受试者ID。
+        session: 实验会话编号。
+        cutNr: 视频片段编号。
+
+    文件名示例:
+    session.xml
